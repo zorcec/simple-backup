@@ -1,0 +1,10 @@
+version: "3"
+services:
+
+  local-backup:
+    build: ./local-backup
+    restart: unless-stopped
+    volumes:
+      - ./scripts:/scripts
+      - ../../backups:/backups
+      - ../../data:/data
